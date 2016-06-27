@@ -81,7 +81,7 @@ var app = {
                 var test = (JSON.stringify(info.data.channelId), 'InfoStart');
                 //obj1 = JSON.stringify(info.data.channelId);
                 //this.cID = JSON.stringify(info.data.channelId);
-                //alert(test);
+                alert(test);
                 console.log(device.cordova);
                 var model = device.model;
                 var platform = device.platform;
