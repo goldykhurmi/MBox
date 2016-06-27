@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Moulding</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/alertify.min.css">
+
+    <link rel="stylesheet" href="css/themes/default.min.css" />
+    <link href="css/Loader.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css"> -->
+
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+
+    <script src="js/jquery.min.js"></script>
+    <link href="ToastMessage/jquery.cftoaster.1.0.1.css" rel="stylesheet" />
+    <script src="ToastMessage/jquery.cftoaster.1.0.1.min.js"></script>
+    <script src="js/exit.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/alertify.min.js"></script>
+
+    <script src="js/localazation.js"></script>
+    <script src="js/moulding.js"></script>
+    <!--<script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>-->
+    <!--
+    <script type="text/javascript">
+    function con() {
+        var answer = confirm("do you want to check our other products")
+        if (answer){
+
+            alert("bye");
+        }
+        else{
+            window.location = "http://www.example.com";
+        }
+    }
+    </script>
+     -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+</head>
+<body>
+
+    <div id="notification" class="opacity">
+        <div class="bck_img">
+
+            <header role="banner" class="header">
+                <div class="container">
+                    <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12 pd0_767">
+                        <div class="heading_h4">
+                            <a class="moulding" onclick="gohome();"><h4 class="moulding"><i class="fa fa-arrow-left"></i> Moulding</h4></a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <div class="clearfix"></div>
+            <div class="margin_top90">
+                <div>
+
+                    <div class="container pd0_767">
+                        <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12 pd0_767">
+
+                            <button class="btn btn-default all" id="all">All</button>
+                            <button class="btn btn-default on" id="on">On</button>
+                            <button class="btn btn-default off" id="off">Off</button>
+                            <button class="btn btn-default error" id="error">Error</button>
+                            <div class="clearfix"></div>
+                            <div class="specear20"></div>
+
+                            <table id="CurrentStatus" class="table">
+                                <tr>
+                                    <td class="mnum">M#</td>
+                                    <td class="currentstatus">Current Status</td>
+                                    <td class="dateformat">DD:HH:MM</td>
+                                    <td class="mould">Mould</td>
+                                    <td class="Timetogo">Time to go</td>
+
+
+                                </tr>
+                            </table>
+
+
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="specear20"></div>
+        <div id="inTurnFadingTextG">
+
+            <div id="inTurnFadingTextG">
+                <p id="notifidata"> Please Wait...</p>
+                <img src="img/rolling.gif" alt="" class="img-responsive" />
+                <h5> Getting Info</h5>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html> 

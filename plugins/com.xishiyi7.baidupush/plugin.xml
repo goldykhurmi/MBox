@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin id="com.xishiyi7.baidupush" version="0.0.1"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>BaiduPush</name>
+    <description>BaiduPushDesc</description>
+	<license>Apache 2.0</license>
+	<keywords>cordova,js,native,plugin,ionic,phonegap,call,baidu,baidupush,boradcast</keywords>
+	<repo>https://github.com/xishiyi7/baiduPush-android.git</repo>
+    <js-module name="BaiduPush" src="www/BaiduPush.js">
+        <clobbers target="cordova.plugins.baiduPush"/>
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="BaiduPush">
+                <param name="android-package" value="com.xishiyi7.plugins.BaiduPush"/>
+            </feature>
+        </config-file>
+		
+        <source-file src="src/android/BaiduPush.java" target-dir="src/com/xishiyi7/plugins"/>        
+    </platform>
+</plugin>

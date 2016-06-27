@@ -1,0 +1,59 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Launcher\"><param name=\"ios-package\" value=\"Launcher\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PGUtils\"><param name=\"ios-package\" value=\"PGUtils\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.launcher"
+        },
+        "com.hutchind.cordova.plugins.launcher": {
+            "PACKAGE_NAME": "com.launcher"
+        },
+        "org.apache.cordova.pgUtils": {
+            "PACKAGE_NAME": "com.m-box"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/com.hutchind.cordova.plugins.launcher/www/Launcher.js",
+            "id": "com.hutchind.cordova.plugins.launcher.Launcher",
+            "pluginId": "com.hutchind.cordova.plugins.launcher",
+            "clobbers": [
+                "plugins.launcher"
+            ]
+        },
+        {
+            "file": "plugins/org.apache.cordova.pgUtils/www/pgUtils.js",
+            "id": "org.apache.cordova.pgUtils.PGUtils",
+            "pluginId": "org.apache.cordova.pgUtils",
+            "merges": [
+                "navigator.PGUtils"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.2.2",
+        "com.hutchind.cordova.plugins.launcher": "0.2.2",
+        "org.apache.cordova.pgUtils": "0.1.0"
+    }
+}

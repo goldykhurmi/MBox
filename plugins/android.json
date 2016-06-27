@@ -1,0 +1,34 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-background-app": {
+            "PACKAGE_NAME": "com.m_box"
+        },
+        "cordova-plugin-chrome-apps-alarms": {
+            "PACKAGE_NAME": "com.m_box"
+        },
+        "cordova-plugin-chrome-apps-notifications": {
+            "PACKAGE_NAME": "com.m_box"
+        },
+        "org.apache.cordova.pgUtils": {
+            "PACKAGE_NAME": "com.m_box"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-chrome-apps-common": {
+            "PACKAGE_NAME": "com.m_box"
+        },
+        "cordova-plugin-chrome-apps-storage": {
+            "PACKAGE_NAME": "com.m_box"
+        },
+        "cordova-plugin-chrome-apps-runtime": {
+            "PACKAGE_NAME": "com.m_box"
+        }
+    }
+}

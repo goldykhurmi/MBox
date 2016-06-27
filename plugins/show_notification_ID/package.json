@@ -1,0 +1,17 @@
+{
+  "name": "himanshugautam",
+  "version": "0.0.1",
+  "description": "show notification",
+  "cordova": {
+    "id": "show_notification_ID",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "himanshu",
+  "license": "ISC"
+}

@@ -1,0 +1,102 @@
+{
+    "cordova-plugin-device": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-device@~1.1.1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "show_notification_ID": {
+        "source": {
+            "type": "registry",
+            "id": "himanshugautam"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-customurlscheme": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-customurlscheme"
+        },
+        "is_top_level": true,
+        "variables": {
+            "URL_SCHEME": "openmyapp"
+        }
+    },
+    "com.hutchind.cordova.plugins.launcher": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nchutchind/App-Launcher-Cordova-Plugin.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-background-app": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-background-app@^2.0.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-chrome-apps-alarms": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-chrome-apps-alarms@^1.3.3"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-chrome-apps-common": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-chrome-apps-common@1"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-chrome-apps-storage": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-chrome-apps-storage@1"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-chrome-apps-notifications": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-chrome-apps-notifications@^1.2.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-chrome-apps-runtime": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-chrome-apps-runtime@1"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "org.apache.cordova.pgUtils": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ahmad-moussawi/pgutils.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

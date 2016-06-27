@@ -1,0 +1,5 @@
+// GENERATED FILE - DO NOT EDIT
+include ":"
+include ":CordovaLib"
+include ":cordova-plugin-background-app:background-activity-lib"
+project(":cordova-plugin-background-app:background-activity-lib").projectDir = new File("cordova-plugin-background-app/m_box-background-activity-lib")

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="show_notification_ID" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>ShowNotification</name>
+  <js-module name="ShowNotification" src="www/ShowNotification.js">
+    <clobbers target="cordova.plugins.ShowNotification" />
+  </js-module>
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="ShowNotification">
+        <param name="android-package" value="show_notification_ID.ShowNotification" />
+      </feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+    <source-file src="src/android/ShowNotification.java" target-dir="src/show_notification_ID/ShowNotification" />
+  </platform>
+</plugin>

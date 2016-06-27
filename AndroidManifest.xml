@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest android:hardwareAccelerated="true"
+	android:versionCode="1"
+	android:versionName="0.0.1"
+	package="com.m-box"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+  <uses-permission android:name="android.permission.READ_CONTACTS" />
+  <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+  <Uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+  <Uses-permission android:name="android.permission.WRITE_SETTINGS" />
+  <Uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+  <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+  <application android:name="text_experiment.com.m-box"></application>
+  
+  <receiver android:name="text_experiment.MyPushMessageReceiver">
+    <intent-filter>
+      <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+      <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+      <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+    </intent-filter>
+  </receiver>
+
+  <receiver android:name="com.baidu.android.pushservice.PushServiceReceiver"
+      android:process=":bdservice_v1">
+    <intent-filter>
+      <action android:name="android.intent.action.BOOT_COMPLETED" />
+      <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+      <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+    </intent-filter>
+  </receiver>
+
+  <receiver android:name="com.baidu.android.pushservice.RegistrationReceiver"
+      android:process=":bdservice_v1">
+    <intent-filter>
+      <action android:name="com.baidu.android.pushservice.action.METHOD" />
+      <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+    </intent-filter>
+    <intent-filter>
+      <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+      <data android:scheme="package" />
+    </intent-filter>
+  </receiver>
+
+  <service
+      android:name="com.baidu.android.pushservice.PushService"
+      android:exported="true"
+      android:process=":bdservice_v1"  >
+    <intent-filter>
+      <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+    </intent-filter>
+  </service>
+  
+  <!--<service android:name=".MyService" android:label="My Service">
+    <intent-filter>
+      <action android:name="com.testpushyme" />
+    </intent-filter>
+  </service>
+
+  <receiver
+      android:name=".receiver.BaiduPushMessageReceiver"
+      android:label="BaiduPushMessageReceiver">
+    <intent-filter>
+      <action android:name="android.intent.action.BOOT_COMPLETED" />
+    </intent-filter>
+  </receiver>-->
+
+  <Meta-data
+
+		android:="" name = "api_key"
+
+		android:="" value = "etKEdklEG1iyFGOim3w0dQvB" />
+
+
+
+  <!--	(Fill in the aforementioned API Key)
+
+		<-! Push application-defined message receiver declaration ->
+
+			<Receiverandroid: name = "com.mlp.push.example.MyPushMessageReceiver">
+
+				<Intent-filter>
+
+					<! - To receive push messages ->
+
+					<Actionandroid: name = "com.baidu.android.pushservice.action.MESSAGE" />
+
+					<-! Receiving bind, unbind, fetch, delete, etc. feedback messages ->
+
+						<Actionandroid: name = "com.baidu.android.pushservice.action.RECEIVE" />
+
+						<Actionandroid: name = "com.baidu.android.pushservice.action.notification.CLICK" />
+
+					</ Intent-filter>
+
+				</ Receiver>
+
+				<-! Push necessary receviver declaration and service ->
+
+					<Receiver android: name = "com.baidu.android.pushservice.PushServiceReceiver"
+
+						android: process = ": bdservice_v1">
+
+						<Intent-filter>
+
+							<Actionandroid: name = "android.intent.action.BOOT_COMPLETED" />
+
+							<Actionandroid: name = "android.net.conn.CONNECTIVITY_CHANGE" />
+
+							<Actionandroid: name = "com.baidu.android.pushservice.action.notification.SHOW" />
+
+							<Actionandroid: name = "com.baidu.android.pushservice.action.media.CLICK" />
+
+						</ Intent-filter>
+
+					</ Receiver>
+
+					<Receiverandroid: name = "com.baidu.android.pushservice.RegistrationReceiver"
+
+						android: process = ": bdservice_v1">
+
+						<Intent-filter>
+
+							<Actionandroid: name = "com.baidu.android.pushservice.action.METHOD" />
+
+							<Actionandroid: name = "com.baidu.android.pushservice.action.BIND_SYNC" />
+
+						</ Intent-filter>
+
+						<Intent-filter>
+
+							<Actionandroid: name = "android.intent.action.PACKAGE_REMOVED" />
+
+							<Data android: scheme = "package" />
+
+						</ Intent-filter>
+
+					</ Receiver>
+
+					<Service
+
+						android: name = "com.baidu.android.pushservice.PushService"
+
+						android: exported = "true"
+
+						android: process = ": bdservice_v1">
+
+						<Intent-filter>
+
+							<Actionandroid: name = "com.baidu.android.pushservice.action.PUSH_SERVICE" />
+
+						</ Intent-filter>
+
+					</ Service>
+-->
+</manifest>

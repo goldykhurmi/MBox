@@ -1,0 +1,200 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Launcher\"><param name=\"android-package\" value=\"com.hutchind.cordova.plugins.launcher.Launcher\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PGUtils\"><param name=\"android-package\" value=\"org.apache.cordova.pgUtils.PGUtils\" /></feature>",
+                            "count": 1
+                        }
+                    ],
+                    "/widget": [
+                        {
+                            "xml": "<feature name=\"BackgroundPlugin\"><param name=\"android-package\" value=\"org.chromium.BackgroundPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ChromeStorage\"><param name=\"android-package\" value=\"org.chromium.ChromeStorage\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ChromeAlarms\"><param name=\"android-package\" value=\"org.chromium.ChromeAlarms\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ChromeNotifications\"><param name=\"android-package\" value=\"org.chromium.ChromeNotifications\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest/application": [
+                        {
+                            "xml": "<activity android:excludeFromRecents=\"true\" android:name=\"org.chromium.BackgroundLauncherActivity\" android:taskAffinity=\".launcher\" android:theme=\"@android:style/Theme.NoDisplay\"><intent-filter android:label=\"@string/launcher_name\"><action android:name=\"android.intent.action.MAIN\" /><category android:name=\"android.intent.category.LAUNCHER\" /></intent-filter></activity>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:alwaysRetainTaskState=\"true\" android:configChanges=\"orientation|keyboardHidden|keyboard|screenSize|locale\" android:excludeFromRecents=\"true\" android:exported=\"false\" android:launchMode=\"singleTop\" android:name=\"org.chromium.BackgroundActivity\" android:taskAffinity=\".cordovabackground\" android:theme=\"@android:style/Theme.NoDisplay\"></activity>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:name=\"org.chromium.ChromeAlarmsReceiver\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:name=\"org.chromium.ChromeNotificationsReceiver\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.launcher"
+        },
+        "com.hutchind.cordova.plugins.launcher": {
+            "PACKAGE_NAME": "com.launcher"
+        },
+        "cordova-plugin-background-app": {
+            "PACKAGE_NAME": "com.m_box"
+        },
+        "cordova-plugin-chrome-apps-common": {
+            "PACKAGE_NAME": "com.m_box"
+        },
+        "cordova-plugin-chrome-apps-storage": {
+            "PACKAGE_NAME": "com.m_box"
+        },
+        "cordova-plugin-chrome-apps-alarms": {
+            "PACKAGE_NAME": "com.m_box"
+        },
+        "cordova-plugin-chrome-apps-runtime": {
+            "PACKAGE_NAME": "com.m_box"
+        },
+        "cordova-plugin-chrome-apps-notifications": {
+            "PACKAGE_NAME": "com.m_box"
+        },
+        "org.apache.cordova.pgUtils": {
+            "PACKAGE_NAME": "com.m_box"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/com.hutchind.cordova.plugins.launcher/www/Launcher.js",
+            "id": "com.hutchind.cordova.plugins.launcher.Launcher",
+            "clobbers": [
+                "plugins.launcher"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-background-app/backgroundapp.js",
+            "id": "cordova-plugin-background-app.backgroundapp",
+            "clobbers": [
+                "cordova.backgroundapp"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-chrome-apps-common/events.js",
+            "id": "cordova-plugin-chrome-apps-common.events",
+            "clobbers": [
+                "chrome.Event"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-chrome-apps-common/errors.js",
+            "id": "cordova-plugin-chrome-apps-common.errors"
+        },
+        {
+            "file": "plugins/cordova-plugin-chrome-apps-common/stubs.js",
+            "id": "cordova-plugin-chrome-apps-common.stubs"
+        },
+        {
+            "file": "plugins/cordova-plugin-chrome-apps-common/helpers.js",
+            "id": "cordova-plugin-chrome-apps-common.helpers"
+        },
+        {
+            "file": "plugins/cordova-plugin-chrome-apps-storage/storage.js",
+            "id": "cordova-plugin-chrome-apps-storage.Storage",
+            "clobbers": [
+                "chrome.storage"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-chrome-apps-alarms/alarms.js",
+            "id": "cordova-plugin-chrome-apps-alarms.Alarms",
+            "clobbers": [
+                "chrome.alarms"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-chrome-apps-runtime/api/app/runtime.js",
+            "id": "cordova-plugin-chrome-apps-runtime.app.runtime",
+            "clobbers": [
+                "chrome.app.runtime"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-chrome-apps-runtime/api/runtime.js",
+            "id": "cordova-plugin-chrome-apps-runtime.runtime",
+            "clobbers": [
+                "chrome.runtime"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-chrome-apps-runtime/lib/CryptoJS/sha256.js",
+            "id": "cordova-plugin-chrome-apps-runtime.CryptoJS-sha256"
+        },
+        {
+            "file": "plugins/cordova-plugin-chrome-apps-runtime/lib/CryptoJS/enc-base64-min.js",
+            "id": "cordova-plugin-chrome-apps-runtime.CryptoJS-enc-base64-min"
+        },
+        {
+            "file": "plugins/cordova-plugin-chrome-apps-notifications/notifications.js",
+            "id": "cordova-plugin-chrome-apps-notifications.notifications",
+            "clobbers": [
+                "chrome.notifications"
+            ]
+        },
+        {
+            "file": "plugins/org.apache.cordova.pgUtils/www/pgUtils.js",
+            "id": "org.apache.cordova.pgUtils.PGUtils",
+            "merges": [
+                "navigator.PGUtils"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.2.2",
+        "com.hutchind.cordova.plugins.launcher": "0.2.2",
+        "cordova-plugin-background-app": "2.0.2",
+        "cordova-plugin-chrome-apps-common": "1.0.7",
+        "cordova-plugin-chrome-apps-storage": "1.0.4",
+        "cordova-plugin-chrome-apps-alarms": "1.3.3",
+        "cordova-plugin-chrome-apps-runtime": "1.1.1",
+        "cordova-plugin-chrome-apps-notifications": "1.3.1",
+        "org.apache.cordova.pgUtils": "0.1.0"
+    }
+}
