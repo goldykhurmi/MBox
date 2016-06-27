@@ -65,7 +65,7 @@ var app = {
     onDeviceReady: function () {
         var self = this;
         //alert('testning', 'Info1');
-        // alert("tetsg");
+         alert("tetsg");
         document.addEventListener("pause", onPause, false);
         // alert("tetsg2");
         try {
