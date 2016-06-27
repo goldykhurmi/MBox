@@ -65,11 +65,15 @@ var app = {
     onDeviceReady: function () {
         var self = this;
         //alert('testning', 'Info1');
-       // alert("tetsg");
+        // alert("tetsg");
         document.addEventListener("pause", onPause, false);
-       // alert("tetsg2");
+        // alert("tetsg2");
         try {
             //Start work, bind the ids app id 7733258 
+
+           
+
+
             window.baidupush.startWork("etKEdklEG1iyFGOim3w0dQvB", function (info) {
                 // alert(JSON.stringify(info), 'InfoStart');
                 //alert(JSON.stringify(info.data.channelId), 'InfoStart');
@@ -81,6 +85,9 @@ var app = {
                 console.log(device.cordova);
                 var model = device.model;
                 var platform = device.platform;
+
+               
+
                 //alert(JSON.stringify(info.data.channelId));
                 //alert(JSON.stringify(info.data.userId));
                 //alert(model);
@@ -261,7 +268,7 @@ var app = {
             //Listen notification arrived event, when a notification arrived, the callback function will be called
             window.baidupush.listenNotificationArrived(function (info) {
                 //your code here
-               // alert("test1");
+                // alert("test1");
                 //window.open("index.html");
                 //alert(info);
             });
@@ -269,7 +276,7 @@ var app = {
             //Listen notification clicked event, when a notification is clicked, the callback function will be called
             window.baidupush.listenNotificationClicked(function (info) {
                 //your code here
-               // alert("test11");
+                // alert("test11");
                 //window.open("index.html");
                 //alert(info);
             });
@@ -283,7 +290,7 @@ var app = {
                 //alert(JSON.stringify(info));
             });
         }
-       // alert("tetsg4");
+        // alert("tetsg4");
     },
 
     showAlert: function (message, title) {
